@@ -1,0 +1,21 @@
+{
+  "_readme": "Plantilla. /mirth-new crea docs/progress/requirements.json a partir de esta estructura (el .template.json no se edita). Los agentes solo cambian 'status' (pending -> drafted -> reviewed) y 'review.code' / 'review.phi'; nunca 'description' ni 'acceptance'. 'user_verified' lo cambia solo el usuario tras probar en TEST. Un cambio de alcance va a decisions.md y requiere aprobación.",
+  "integration": "<nombre-integracion>",
+  "mode": "<NEW|UPDATE>",
+  "mirth_version": "4.4.2",
+  "items": [
+    {
+      "id": "R-001",
+      "category": "<channel|code-template|global-script|sql|test>",
+      "description": "<comportamiento verificable, p. ej. Source TCP/MLLP recibe ORU^R01 del LIS y valida MSH-9 y PID-3>",
+      "acceptance": [
+        "<criterio verificable 1>",
+        "<criterio verificable 2>"
+      ],
+      "artifact": "deliverables/<nombre-integracion>/v1/<ruta>",
+      "status": "pending",
+      "review": { "code": "pending", "phi": "pending" },
+      "user_verified": false
+    }
+  ]
+}
