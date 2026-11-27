@@ -1,0 +1,23 @@
+{
+  "_readme": "Copia este archivo a docs/progress/feature-list.json al iniciar el proyecto (el .template.json no se edita). Solo se editan 'status' y 'notes' de una feature existente; nunca se edita un test o caso de eval para forzar 'passing'. Toda feature nueva se agrega como 'failing'.",
+  "project": "<nombre del proyecto>",
+  "created": "<YYYY-MM-DD>",
+  "features": [
+    {
+      "id": "F001",
+      "title": "<título corto y verificable>",
+      "description": "<qué debe hacer, desde la perspectiva del usuario>",
+      "acceptance_criteria": [
+        "<criterio verificable 1>",
+        "<criterio verificable 2>"
+      ],
+      "status": "failing",
+      "priority": "P0",
+      "requires_eval": false,
+      "eval_suite": "",
+      "requires_security_review": false,
+      "requires_architecture_decision": false,
+      "notes": ""
+    }
+  ]
+}
