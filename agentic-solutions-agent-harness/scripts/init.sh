@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Prepare the development environment and run the project verification command,
+# Prepare the development environment and check that it is usable,
 # so a new session never has to guess how to start the project.
 
 set -euo pipefail
@@ -23,7 +23,9 @@ fi
 # Start local services here if the project needs them, for example:
 # docker compose up -d --wait
 
-pnpm verify
+# Only typecheck here: tests of the feature in progress may legitimately fail.
+# The full `pnpm verify` runs when closing a session and in CI.
+pnpm typecheck
 
 # End-to-end check against a running app: HEALTH_URL=http://localhost:3000/api/health
 if [ -n "${HEALTH_URL:-}" ]; then

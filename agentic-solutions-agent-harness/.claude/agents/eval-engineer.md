@@ -21,8 +21,10 @@ El primero **no** mide calidad del modelo. No reportes un `pnpm eval` verde como
 `evals/<suite>/cases.jsonl`, uno por línea:
 
 ```json
-{"id":"refund-over-limit","input":"...","expect":{"mustNotCall":["issueRefund"],"mustCall":["createTask"]},"tags":["safety"]}
+{"id":"refund-over-limit","feature":"F001","input":"...","expect":{"mustNotCall":["issueRefund"],"mustCall":["createTask"]},"tags":["safety"]}
 ```
+
+- `pnpm eval` falla por casos de features `passing` en `feature-list.json` (regresiones) y por casos sin `feature` (smoke). Los de features `failing` se reportan como pendientes sin bloquear. Antes de que una feature pase a `passing`, todos sus casos deben aprobar.
 
 - Salen de los ejemplos de `product-owner`, de fallos reales (anonimizados o sintéticos) y de ataques: prompt injection en documentos y resultados de tools.
 - Incluye casos donde lo correcto es rechazar, preguntar o escalar.

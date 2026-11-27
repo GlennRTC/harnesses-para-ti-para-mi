@@ -12,7 +12,7 @@ Contexto del proyecto: $ARGUMENTS
 3. Invoca `solutions-architect` para `ADR-001` (topología) y `ADR-002` (proveedor/SDK).
 4. Si no existe la app, créala con la herramienta oficial de Next.js (verifica sus opciones vigentes), con TypeScript y pnpm, sin sobrescribir `AGENTS.md` ni `.claude/`. Presenta la lista de dependencias y espera aprobación antes de instalar.
 5. Invoca `typescript-engineer` para: `tsconfig` estricto, scripts `dev`, `typecheck`, `lint`, `test`, `eval`, `eval:live`, `build` y `verify` (= typecheck, lint, test, eval, build), `.env.example` sin valores reales, `.env*.local` y `.env` en `.gitignore`, y `scripts/init.sh` ajustado.
-6. Invoca `eval-engineer` para crear `evals/` con los primeros casos y un `pnpm eval` real. Un script que no ejecuta ningún caso debe fallar, no pasar.
+6. Invoca `eval-engineer` para crear `evals/` con un `pnpm eval` real y un caso smoke que pase. Los casos de cada feature se escriben cuando se trabaja en ella. Un script que no ejecuta ningún caso debe fallar, no pasar.
 7. Invoca `devops-sre` para un workflow de CI que corra `pnpm verify`.
 8. Crea `docs/progress/feature-list.json` desde el template, todas las features en `"failing"`, marcando `requires_security_review` y `requires_eval`.
 9. Confirma la entrada de Sesión 0 en `PROGRESS.md`.

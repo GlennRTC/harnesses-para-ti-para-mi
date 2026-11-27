@@ -14,6 +14,6 @@ Feature: $ARGUMENTS
 7. Implementa con los que apliquen: `ai-agent-engineer`, `nextjs-engineer`, `react-ui-engineer`. En paralelo solo con carpetas disjuntas.
 8. Revisión independiente: `eval-engineer` (si aplica) y `qa-test-engineer`.
 9. Si `requires_security_review`, invoca `security-reviewer`.
-10. Con `pnpm verify` verde y revisiones resueltas, marca `passing`, actualiza `PROGRESS.md` y haz commit en la rama de trabajo.
+10. Con `pnpm verify` verde, todos los casos de eval de la feature aprobados y las revisiones resueltas, marca `passing`, vuelve a correr `pnpm eval`, actualiza `PROGRESS.md` y haz commit en la rama de trabajo.
 
 Reporta qué se construyó, resultados exactos, hallazgos abiertos y decisiones pendientes.

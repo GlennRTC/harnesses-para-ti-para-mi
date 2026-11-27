@@ -38,7 +38,7 @@ Si este archivo fija una elección, los subagentes se adaptan y no la cuestionan
 2. Lee `git log --oneline -20` y `docs/progress/PROGRESS.md`.
 3. Lee `docs/progress/feature-list.json` y elige **una** feature de mayor prioridad con `"status": "failing"`.
 4. Corre `./scripts/init.sh`.
-5. Haz una verificación end-to-end (la app responde y el flujo del agente corre), no solo unit tests. Si algo está roto y no está en `PROGRESS.md`, documéntalo antes de seguir.
+5. Haz una verificación end-to-end (la app responde y el flujo del agente corre), no solo unit tests. Si algo está roto y no está en `PROGRESS.md`, documéntalo antes de seguir. Los fallos limitados a tests o evals de la feature `"failing"` elegida son esperados.
 6. Implementa la feature. Al terminar: corre `pnpm verify` (y `pnpm eval:live` si cambió el comportamiento del modelo), marca `"passing"` **solo si lo verificaste tú**, actualiza `PROGRESS.md` y haz commit en la rama de trabajo.
 
 ## Reglas no negociables sobre `feature-list.json`

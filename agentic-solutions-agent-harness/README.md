@@ -19,7 +19,7 @@ Boilerplate para construir productos donde un modelo de lenguaje decide pasos y 
 │   │   └── adr.md                 # /adr
 │   └── hooks/
 │       └── check_secrets_patterns.py
-├── scripts/init.sh                # install + verify + health check opcional
+├── scripts/init.sh                # install + typecheck + health check opcional
 └── docs/
     ├── AGENT_TEAM.md
     ├── progress/
